@@ -32,10 +32,10 @@ st.title("Room Classification Project")
 st.write("""
          House & Apartaments Classification model
          #### TEAM MEMBER
-         - Сидоркин Георгий Владимирович РИМ-130908
          - Рахарди Сандикха РИМ-130908
          - Мухин Виктор Александрович РИМ-130908
-         -
+         - Шлёгин Лев Русланович РИМ-130908
+         - Сидоркин Георгий Владимирович РИМ-130908
          """)
 
 st.write("""#### Our Project""")
