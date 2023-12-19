@@ -22,6 +22,7 @@ def preprocess_image(img):
     x = tf.keras.applications.efficientnet.preprocess_input(x)
     return x
 
+@st.cache
 def load_model():
     return pipeline(model="JuanMa360/room-classification")
 
