@@ -27,7 +27,7 @@ def preprocess_image(img):
 def load_model():
     processor = AutoImageProcessor.from_pretrained("JuanMa360/room-classification")
     model = AutoModelForImageClassification.from_pretrained("JuanMa360/room-classification")
-    return pipeline("image-classification", model=model, processor=processor)
+    return pipeline("image-classification", model=model, image_processor=processor)
 
 # Project Title
 st.title("Room Classification Project")
