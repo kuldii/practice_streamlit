@@ -3,6 +3,7 @@ import streamlit as st
 import tensorflow as tf
 from PIL import Image
 from transformers import pipeline
+from transformers import AutoImageProcessor, AutoModelForImageClassification
 
 
 def load_image():
@@ -24,7 +25,10 @@ def preprocess_image(img):
 
 @st.cache
 def load_model():
-    return pipeline(model="JuanMa360/room-classification")
+    pipe = pipeline("image-classification", model="JuanMa360/room-classification")
+    processor = AutoImageProcessor.from_pretrained("JuanMa360/room-classification")
+    model = AutoModelForImageClassification.from_pretrained("JuanMa360/room-classification")
+    return model
 
 # Project Title
 st.title("Room Classification Project")
