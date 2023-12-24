@@ -23,7 +23,7 @@ def preprocess_image(img):
     x = tf.keras.applications.efficientnet.preprocess_input(x)
     return x
 
-@st.cache
+@st.cache_resource
 def load_model():
     # processor = AutoImageProcessor.from_pretrained("JuanMa360/room-classification")
     # return AutoModelForImageClassification.from_pretrained("JuanMa360/room-classification")
